@@ -46,7 +46,10 @@ $(document).ready(function(){
 
 
 
-
+	// stellar plugin initialize
+	if(screen.width > 768){
+		$(window).stellar();
+	}
 
 
 
