@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 
 	// skrollr plugin 
-	var s = skrollr.init();
+	// var s = skrollr.init();
 
 
 
