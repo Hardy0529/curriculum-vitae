@@ -16,13 +16,8 @@ $(document).ready(function () {
         
     });
 
-   
-    if (screen.width > 768) {
-        $(".project-area .button-group #btn1").trigger("click");
-    }
-    else{
-        $(".project-area .button-group #btn2").trigger("click");
-    }
+    $(".project-area .button-group #btn1").trigger("click");
+    
     
     // $('.project-area .grid .test-popup-link').magnificPopup({
     // 	type: 'image',
