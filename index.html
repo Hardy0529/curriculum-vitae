@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/base.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-	<link rel="stylesheet" href="css/component.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/layout.min.css">
+	<link rel="stylesheet" href="css/component.min.css">
 </head>
 <body>
 
@@ -962,52 +962,31 @@
 	
 
 	<script>
-			// isotope
-			let $btns = $('.project-area .button-group button');
-			$btns.click(function (e) {
+			
 
-				$('.project-area .button-group button').removeClass('active');
-				e.target.classList.add('active');
-
-				let selector = $(e.target).attr('data-filter');
-				$('.project-area .grid').isotope({
-					filter: selector
-				});
-				return false;
-			})
-
-			$('.project-area .button-group #btn1').trigger('click');
-
-			// $('.project-area .grid .test-popup-link').magnificPopup({
-			// 	type: 'image',
-			// 	gallery: { enabled: true }
-			// });
-
-
-
-
-				//按下傳送按鈕後執行
-			function submitHandler() {
-				var to = "lee0936996319b@gmail.com";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
-				var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
-				var email = emailText.value;
-				var tel = telText.value;
-				var subject = subText.value;
-				//把user填的資料都塞到 mail body 中
-				var body = "" + bodyText.value + '%0A%0A%0A';//%0A是換行 換了三行
-				body += "From：" + nameText.value + '%0A';
-				body += "Email：" + emailText.value + '%0A';
-				body += "Tel：" + telText.value;
-				//傳送的主要程式碼
-				mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
-				mailTo.click();
-			}
-			//在body onload
-			function init() {
-				subText.value = initSubject;
-				toText.value = initTo;
-				bodyText.value = initBody;
-			}
+		//按下傳送按鈕後執行
+		function submitHandler() {
+			var to = "lee0936996319b@gmail.com";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
+			var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
+			var email = emailText.value;
+			var tel = telText.value;
+			var subject = subText.value;
+			//把user填的資料都塞到 mail body 中
+			var body = "" + bodyText.value + '%0A%0A%0A';//%0A是換行 換了三行
+			body += "From：" + nameText.value + '%0A';
+			body += "Email：" + emailText.value + '%0A';
+			body += "Tel：" + telText.value;
+			//傳送的主要程式碼
+			mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+			mailTo.click();
+		}
+		//在body onload
+		function init() {
+			subText.value = initSubject;
+			toText.value = initTo;
+			bodyText.value = initBody;
+		}
+			
 
 
 
