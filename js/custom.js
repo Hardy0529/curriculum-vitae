@@ -59,9 +59,9 @@ $(document).ready(function () {
     });
 
     // stellar plugin initialize
-    if (screen.width > 768) {
-        $(window).stellar();
-    }
+    // if (screen.width > 768) {
+    //     $(window).stellar();
+    // }
 
     // skrollr plugin
     // var s = skrollr.init();
