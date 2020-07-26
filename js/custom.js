@@ -2,10 +2,10 @@ $(document).ready(function () {
     // isotope
     let $btns = $(".project-area .button-group button");
     $btns.click(function (e) {
-        // $(".project-area .button-group button").removeClass("active");
+        $(".project-area .button-group button").removeClass("active");
 
         
-        // e.target.classList.add("active");
+        e.target.classList.add("active");
 
         let selector = $(e.target).attr("data-filter");
         $(".project-area .grid").isotope({
@@ -221,5 +221,30 @@ $(document).ready(function () {
             },
         });
     });
+
+    $("#cutover-phone").on("click", function () {
+        $.fancybox.open({
+            src: "https://hardy0529.github.io/jquery--cutover-phone/",
+            type: "iframe",
+            opts: {
+                afterShow: function (instance, current) {
+                    console.info("done!");
+                },
+            },
+        });
+    });
+    $("#spotify").on("click", function () {
+        $.fancybox.open({
+            src: "https://hardy0529.github.io/spotify",
+            type: "iframe",
+            opts: {
+                afterShow: function (instance, current) {
+                    console.info("done!");
+                },
+            },
+        });
+    });
+
+    
 });
 
